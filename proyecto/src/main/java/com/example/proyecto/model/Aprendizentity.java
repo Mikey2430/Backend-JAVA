@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name = "aprendiz")
-public class Aprendiz {
+public class Aprendizentity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,4 +30,20 @@ public class Aprendiz {
 
     @Column(name = "direccion")
     private String direccion;
+
+    @Column (name = "cedula", unique = true)
+    private String cedula;
+
+    @Column (name = "tipo de programa")
+    private String tipoDePrograma;
+
+    @Column (name = "programa")
+    private String programa;
+
+    @Column (name = "ficha")
+    private String ficha;
+
+    @Column (name = "regional")
+    private String regional;
+
 }
